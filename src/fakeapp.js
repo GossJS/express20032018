@@ -1,12 +1,12 @@
 const app = {
-  on(event, f) {
+  use(event, f) {
     console.log(`Вы передали событие ${event} и функцию с ${f.length} объявленными аргументами!`);
   },
 };
-app.on('nil', () => {});
-app.on('one', x => x);
-app.on('two', (x, y) => x || y);
-app.on('rest', (...n) => n);
+app.use('nil', () => {});
+app.use('one', x => x);
+app.use('two', (x, y) => x || y);
+app.use('rest', (...n) => n);
 /*
 Вы передали событие nil и функцию с 0 объявленными аргументами!
 Вы передали событие one и функцию с 1 объявленными аргументами!
